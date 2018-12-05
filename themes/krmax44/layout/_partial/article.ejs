@@ -1,0 +1,26 @@
+<% if (page.image && !index) { %>
+<style>
+	header::before {
+		background-image: url("<%- page.image -%>");
+	}
+</style>
+<% } %>
+
+<article>
+	<% if (index) { %><a href="<%- page.permalink %>"><% } %>
+		<% if (page.image && index) { %><img src="<%- index ? page.permalink + page.image : page.image -%>" class="header-image"><% } %>
+		<h1><%- page.title %></h1>
+	<% if (index) { %></a> <% } %>
+
+	<time datetime="<%= date_xml(page.date) %>"><%= date(page.date, config.date_format) %></time>
+
+	<div class="content">
+		<%- index ? page.excerpt || page.content : page.content %>
+	</div>
+
+	<% if (index) { %>
+		<a href="<%- page.permalink %>" class="btn btn-next">Sauce Recipie</a>
+	<% } %>
+</article>
+
+<% if (line) { %><hr><% } %>

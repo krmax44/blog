@@ -1,0 +1,6 @@
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: https://gitlab.com/krmax44/blog.git
+  email: hi@krmax44.de

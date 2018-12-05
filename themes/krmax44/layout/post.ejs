@@ -1,0 +1,10 @@
+<div>
+	<%- partial('_partial/article', {page, index: false, line: true }) %>
+
+	<div class="share">
+		<span>Enjoyed the sauce? Share it:</span>
+		<a href="https://twitter.com/share?text=<%- page.title %>&url=<%- page.permalink %>" class="btn btn-fab"><img src="/images/twitter.svg" alt="Twitter"></a>
+		<a href="https://www.reddit.com/submit?url=<%- page.permalink %>&title=<%- page.title %>" class="btn btn-fab"><img src="/images/reddit.svg" alt="Reddit"></a>
+		<a href="#!" class="btn btn-fab copy-url"><img src="/images/link.svg" alt="URL"></a>
+	</div>
+</div>

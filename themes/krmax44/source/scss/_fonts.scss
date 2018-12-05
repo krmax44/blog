@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Assistant';
+    src: url('/fonts/Assistant-Regular.eot');
+    src: url('/fonts/Assistant-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Assistant-Regular.woff2') format('woff2'),
+        url('/fonts/Assistant-Regular.woff') format('woff'),
+        url('/fonts/Assistant-Regular.ttf') format('truetype'),
+        url('/fonts/Assistant-Regular.svg#Assistant-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fira Mono';
+    src: url('/fonts/FiraMono-Regular.eot');
+    src: local('Fira Mono'), local('Fira Code'), local('FiraCode-Regular'), local('FiraMono-Regular'),
+        url('/fonts/FiraMono-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/FiraMono-Regular.woff2') format('woff2'),
+        url('/fonts/FiraMono-Regular.woff') format('woff'),
+        url('/fonts/FiraMono-Regular.ttf') format('truetype'),
+        url('/fonts/FiraMono-Regular.svg#FiraMono-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url('/fonts/LeagueSpartan-Bold.eot');
+    src: url('/fonts/LeagueSpartan-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/LeagueSpartan-Bold.woff2') format('woff2'),
+        url('/fonts/LeagueSpartan-Bold.woff') format('woff'),
+        url('/fonts/LeagueSpartan-Bold.ttf') format('truetype'),
+        url('/fonts/LeagueSpartan-Bold.svg#LeagueSpartan-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}

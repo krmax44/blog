@@ -1,0 +1,23 @@
+$light: #4592D6;
+$dark: #0D1D2B;
+$opaque: rgba(69, 146, 214, .5);
+$background: #FCFCFC;
+
+$league: League Spartan, Segoe UI, Roboto, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$assistant: Assistant, Segoe UI, Roboto, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$fira: Fira Mono, Consolas, monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+$breakpoint-sm: 600px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+$container-max-width: 1000px;
+
+@import 'fonts';
+@import 'base';
+@import 'header';
+@import 'footer';
+@import 'article';
+@import 'button';
+@import 'pagination';
+//@import 'cookies';
+@import 'prism';

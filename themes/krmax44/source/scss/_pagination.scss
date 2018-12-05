@@ -1,0 +1,15 @@
+.pagination {
+	display: flex;
+	margin-top: auto;
+	padding-top: 40px;
+
+	a.btn {
+		width: auto;
+		min-width: 200px;
+		margin: 0;
+	}
+
+	a.btn-next {
+		margin-left: auto;
+	}
+}

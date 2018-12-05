@@ -1,0 +1,10 @@
+<div>
+	<% page.posts.each(function(article, i){ %>
+		<%- partial('_partial/article', {page: article, index: true, line: page.posts.length !== (i + 1) || (page.next_link !== '' || (page.prev_link !== '' || page.current === 2)) }) %>
+	<% }) %>
+</div>
+
+<div class="pagination">
+	<% if (page.prev_link !== '' || page.current === 2) { %><a href="/<%- page.prev_link %>" class="btn btn-prev">Previous</a><% } %>
+	<% if (page.next_link !== '') { %><a href="/<%- page.next_link %>" class="btn btn-next">Next</a><% } %>
+</div>

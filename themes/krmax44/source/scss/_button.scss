@@ -1,0 +1,50 @@
+.btn {
+	
+	&.btn-next, &.btn-prev {
+		display: inline-block;
+		padding: 10px 40px;
+		width: 100%;
+		max-width: $container-max-width;
+		margin: auto;
+		text-align: center;
+		border: 1px $light solid;
+		border-radius: 50px;
+		background-color: transparent;
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.608 25.559"><defs><style>.a{fill:none;stroke:rgba(69,146,214,0.3);stroke-width:4px;}</style></defs><path class="a" d="M532,740.526l11.365,11.365-6.393,6.393L532,763.257" transform="translate(-530.586 -739.112)"/></svg>');
+		background-size: auto 50%;
+		background-repeat: no-repeat;
+		background-position: 20px center;
+		transform: none;
+		box-shadow: none;
+		transition: all .5s, color .3s;
+
+		&:hover {
+			background-color: $light;
+			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.608 25.559"><defs><style>.a{fill:none;stroke:rgb(255,255,255);stroke-width:4px;}</style></defs><path class="a" d="M532,740.526l11.365,11.365-6.393,6.393L532,763.257" transform="translate(-530.586 -739.112)"/></svg>');
+			background-position: calc(100% - 20px) center;
+			transform: translate(-2px, -2px);
+			box-shadow: 0 3px 5px rgba(0,0,0,.35);
+			color: #fff;
+		}
+	}
+
+	&.btn-prev {
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.608 25.559"><defs><style>.a{fill:none;stroke:rgba(69,146,214,0.3);stroke-width:4px;}</style></defs><path class="a" d="M532,740.526l11.365,11.365-6.393,6.393L532,763.257" transform="translate(546.194 764.671) rotate(180)"/></svg>');
+		background-position: calc(100% - 20px) center;
+
+		&:hover {
+			background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.608 25.559"><defs><style>.a{fill:none;stroke:rgb(255,255,255);stroke-width:4px;}</style></defs><path class="a" d="M532,740.526l11.365,11.365-6.393,6.393L532,763.257" transform="translate(546.194 764.671) rotate(180)"/></svg>');
+			background-position: 20px center;
+		}
+	}
+
+	&.btn-fab {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $opaque;
+		border-radius: 50%;
+		padding: 10px;
+		box-shadow: 0 3px 5px rgba(0,0,0,.15);
+	}
+}

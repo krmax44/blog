@@ -1,0 +1,25 @@
+# CACHING ENABLED
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType image/svg "access 1 year"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/javascript "access 1 month"
+ExpiresDefault "access 1 month"
+
+# HTTPS ONLY
+RewriteEngine On
+RewriteCond %{HTTPS} != on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+# DEFLATE
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css text/javascript application/javascript image/svg image/png image/jpeg image/jpg image/gif image/svg+xml
+AddOutputFilter DEFLATE css svg
