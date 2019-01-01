@@ -13,17 +13,6 @@ yarn dev # http://localhost:4000
 yarn deploy
 ```
 
-Or, with npm:
-
-```bash
-git clone https://github.com/krmax44/blog.git
-npm install
-npm run dev # http://localhost:4000
-
-# deploying
-npm run deploy
-```
-
 ## Excluded files
 
 See `.gitignore`.

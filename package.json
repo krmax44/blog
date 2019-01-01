@@ -7,10 +7,10 @@
   },
   "scripts": {
     "dev": "hexo serve --config _config.yml,_config_dev.yml",
-    "deploy": "hexo generate --config _config.yml,_config_deploy.yml && hexo deploy"
+    "start": "hexo generate --config _config.yml"
   },
   "dependencies": {
-    "hexo": "^3.2.0",
+    "hexo": "3.7.1",
     "hexo-all-minifier": "^0.5.2",
     "hexo-deployer-git": "^0.3.1",
     "hexo-generator-archive": "^0.1.4",
