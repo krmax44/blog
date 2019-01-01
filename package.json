@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "hexo serve --config _config.yml,_config_dev.yml",
-    "start": "hexo generate --config _config.yml"
+    "start": "node ./generate.js"
   },
   "dependencies": {
     "hexo": "3.7.1",
