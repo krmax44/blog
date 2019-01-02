@@ -6,6 +6,7 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
+_config_deploy.yml
 source/imprint/index.md
 source/_drafts
 .vscode/

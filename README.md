@@ -19,3 +19,4 @@ See `.gitignore`.
 
 - Drafts `source/_drafts` are not included.
 - My imprint is not included.
+- Deployment config is not included. I use a private Git repo with continious deployment.
