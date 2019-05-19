@@ -10,8 +10,7 @@ module.exports = {
 			resolve: 'saber-plugin-prismjs'
 		},
 		{
-			resolve:
-				'/home/max/Dokumente/Projects/saber-max/packages/saber-plugin-image',
+			resolve: 'saber-plugin-image',
 			options: {
 				sizes: [1000, 530, 350]
 			}
