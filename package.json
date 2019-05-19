@@ -1,0 +1,52 @@
+{
+	"name": "blog-saber",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"dependencies": {
+		"animejs": "^3.0.1",
+		"clipboard-copy": "^3.0.0",
+		"date-fns": "^1.30.1",
+		"element-in-view": "^0.1.0",
+		"node-sass": "^4.11.0",
+		"node-vibrant": "^3.2.0-alpha",
+		"prismjs": "^1.16.0",
+		"saber": "^0.6.2",
+		"saber-highlighter-prism": "^0.3.0",
+		"saber-plugin-feed": "^0.3.0",
+		"saber-plugin-generate-feed": "^0.2.0",
+		"saber-plugin-image": "^0.0.3",
+		"saber-plugin-prismjs": "^0.2.0",
+		"saber-plugin-query-posts": "^0.3.0",
+		"sass-loader": "^7.1.0",
+		"style-resources-loader": "^1.2.1",
+		"typeface-assistant": "^0.0.54",
+		"typeface-fira-mono": "^0.0.72",
+		"typeface-league-spartan": "^0.0.44"
+	},
+	"scripts": {
+		"dev": "saber",
+		"build": "saber build",
+		"lint": "xo"
+	},
+	"devDependencies": {
+		"eslint-config-prettier": "^4.3.0",
+		"eslint-plugin-prettier": "^3.1.0",
+		"prettier": "^1.17.1",
+		"xo": "^0.24.0"
+	},
+	"xo": {
+		"envs": [
+			"browser",
+			"node"
+		],
+		"extends": [
+			"plugin:prettier/recommended"
+		],
+		"rules": {
+			"import/no-unassigned-import": "off",
+			"unicorn/filename-case": "off"
+		},
+		"prettier": true
+	}
+}
