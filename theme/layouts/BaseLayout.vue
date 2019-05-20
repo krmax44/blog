@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import SiteHeader from '../components/Header';
-import SiteFooter from '../components/Footer';
+import SiteHeader from '../components/SiteHeader';
+import SiteFooter from '../components/SiteFooter';
 
 export default {
   props: ['page'],
@@ -18,7 +18,9 @@ export default {
     const attributes = page.attributes || {};
     const siteConfig = this.$siteConfig;
 
-    const title = attributes.title
+    const title = page.tag
+      ? `Posts tagged with "${page.tag}" - ${siteConfig.title}`
+      : attributes.title
       ? `${attributes.title} - ${siteConfig.title}`
       : siteConfig.title;
 
@@ -33,7 +35,8 @@ export default {
       title,
       meta: [
         {
-          name: 'og:title'
+          name: 'og:title',
+          content: title
         },
         {
           name: 'description',
@@ -107,115 +110,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-@import '../assets/scss/variables.scss';
-@import '../assets/scss/prism.scss';
-
-body {
-  min-height: 100vh;
-  background-image: linear-gradient(300deg, #414e4f, #abd2fa);
-  background-size: cover;
-  background-attachment: fixed;
-  margin: 0;
-  padding: 0;
-  font-family: $assistant;
-  font-weight: normal;
-  font-size: 18px;
-  color: $dark;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $league;
-  font-weight: bold;
-  color: $light;
-  margin: 0;
-}
-
-p,
-li {
-  line-height: 1.5;
-}
-
-p {
-  text-align: justify;
-}
-
-.page-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: $light;
-}
-
-.container {
-  max-width: $container-max-width;
-  width: 100%;
-  margin: auto;
-  flex: 1;
-  padding: 5px;
-}
-
-@media (min-width: $breakpoint-md) {
-  .container {
-    padding: 10px;
-  }
-}
-
-img {
-  max-width: 100%;
-}
-
-.center {
-  text-align: center;
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  width: 80%;
-  margin: auto;
-  background-color: $opaque;
-}
-
-blockquote {
-  margin: 0;
-  padding-left: 10px;
-  border-left: 3px $opaque solid;
-}
-
-code,
-pre,
-.highlight * {
-  font-family: $fira;
-}
-
-code {
-  display: inline-block;
-  margin: 1px 5px;
-  padding: 2px 5px;
-  background-color: rgba(69, 146, 214, 0.1);
-}
-
-pre > code {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: auto;
-}
-</style>

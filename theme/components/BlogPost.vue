@@ -30,10 +30,26 @@
           <!-- eslint-disable-next-line vue/no-v-html -->
           <div v-html="post.excerpt" v-if="index" />
           <slot v-if="!index" />
-          <saber-link v-if="index" :to="post.attributes.permalink">
+          <saber-link
+            v-if="index"
+            :to="post.attributes.permalink"
+            class="read-more"
+          >
             Read more...
           </saber-link>
         </div>
+      </div>
+
+      <div v-if="!index" class="post-tags">
+        This post is tagged with
+        <saber-link
+          :to="tag.permalink"
+          class="tag"
+          v-for="tag in post.tags"
+          :key="tag.permalink"
+        >
+          #{{ tag.name }}
+        </saber-link>
       </div>
 
       <div v-if="!index" class="post-share">
@@ -67,7 +83,7 @@
 </template>
 
 <script>
-import SiteButton from './Button';
+import SiteButton from './SiteButton';
 import copy from 'clipboard-copy';
 import { format } from 'date-fns';
 
@@ -156,7 +172,8 @@ export default {
 
   .post-text,
   .post-action,
-  .post-share {
+  .post-share,
+  .post-tags {
     padding: 20px;
   }
 
@@ -166,6 +183,10 @@ export default {
     max-width: 100%;
     width: auto;
     margin: auto;
+  }
+
+  .read-more {
+    font-weight: bold;
   }
 
   .post-text img {
@@ -199,6 +220,15 @@ export default {
     .btn {
       margin: 0;
     }
+  }
+
+  .post-tags .tag {
+    display: inline-block;
+    background-color: $opaque;
+    padding: 5px 20px;
+    margin: 5px;
+    color: $dark;
+    border-radius: 5px;
   }
 
   .post-share {
@@ -247,10 +277,6 @@ export default {
   .copy-url img {
     transform: rotate(0deg);
     transition: transform 0.5s ease-in-out;
-  }
-
-  h1 {
-    font-size: 1.2em;
   }
 
   span.date {

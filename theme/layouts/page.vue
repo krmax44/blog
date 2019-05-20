@@ -18,17 +18,6 @@ import transition from '../utils/page-transition';
 export default {
   components: { BaseLayout },
   props: ['page'],
-  head() {
-    const title = `${this.page.attributes.title} - ${this.$siteConfig.title}`;
-    return {
-      title,
-      meta: [
-        {
-          robots: this.page.attributes.noRobots ? 'noindex' : 'index'
-        }
-      ]
-    };
-  },
   transition
 };
 </script>

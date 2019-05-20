@@ -8,16 +8,16 @@
       </h1>
       <div class="links">
         <a href="https://github.com/krmax44">
-          <img src="../assets/images/github.svg">
+          <img src="../assets/images/github.svg" />
         </a>
         <a href="https://twitter.com/krmax44">
-          <img src="../assets/images/twitter.svg">
+          <img src="../assets/images/twitter.svg" />
         </a>
         <a :href="$feed.permalink || '#!'">
-          <img src="../assets/images/rss.svg">
+          <img src="../assets/images/rss.svg" />
         </a>
         <a href="mailto:hi@krmax44.de">
-          <img src="../assets/images/mail.svg">
+          <img src="../assets/images/mail.svg" />
         </a>
       </div>
     </div>
@@ -32,12 +32,12 @@ header {
   flex: 0;
   width: 100%;
   min-height: 200px;
-  align-items: center;
-  justify-content: center;
 
   .container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   .links {
@@ -55,15 +55,20 @@ header {
   }
 
   a {
-    color: #fff;
+    color: $dark;
     text-decoration: none;
   }
 
-  svg, img {
+  img {
     height: 2em;
+    filter: invert(1);
+
+    @media (max-width: $breakpoint-lg) {
+      height: 1.5em;
+    }
 
     & > path {
-      fill: #fff;
+      fill: $dark;
     }
   }
 }

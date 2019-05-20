@@ -41,12 +41,12 @@ footer {
 
   a,
   span {
-    color: #fff;
+    color: $dark;
     margin: 0 20px;
   }
 
   span {
-    color: rgba(255, 255, 255, 0.7);
+    color: $opaque;
   }
 }
 
