@@ -105,7 +105,7 @@ export default {
           sizes: '512x512'
         }
       ],
-      htmlAttrs: [{ lang: 'de' }]
+      htmlAttrs: { lang: 'de' }
     };
   }
 };

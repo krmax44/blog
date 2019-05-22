@@ -21,8 +21,7 @@
 		"style-resources-loader": "^1.2.1",
 		"typeface-assistant": "^0.0.54",
 		"typeface-fira-mono": "^0.0.72",
-		"typeface-league-spartan": "^0.0.44",
-		"web-animations-js": "^2.3.1"
+		"typeface-league-spartan": "^0.0.44"
 	},
 	"scripts": {
 		"dev": "saber",

@@ -15,6 +15,7 @@
 import BaseLayout from './BaseLayout';
 import BlogPost from '../components/BlogPost';
 import elementPosition from '../utils/element-position';
+import transition from '../utils/page-transition';
 import {
   scaleOut,
   scaleIn,
@@ -23,8 +24,13 @@ import {
   moveToElement,
   setScaleZero,
   setPosition,
-  bodyScroll
+  bodyScroll,
+  fancyTransition,
+  setOpacityZero,
+  setOpacityOne,
+  autoPosition
 } from '../utils/animation-utils';
+import pageTransition from '../utils/page-transition';
 
 export default {
   components: { BlogPost, BaseLayout },
@@ -33,103 +39,78 @@ export default {
     const tagRegex = /\/tags\/.*/gm;
 
     if (
-      [to.fullPath, from.fullPath].includes('/') ||
-      tagRegex.test(to.fullPath) ||
-      tagRegex.test(from.fullPath)
+      ([to.fullPath, from.fullPath].includes('/') ||
+        tagRegex.test(to.fullPath) ||
+        tagRegex.test(from.fullPath)) &&
+      ![to.name, from.name].includes('404')
     ) {
       return {
         css: false,
         beforeEnter(el) {
           const container = el.querySelector('.post-container');
-          container.style.opacity = '0';
-          container.querySelector('.post').style.opacity = '0';
+          setOpacityZero(container);
+          setOpacityZero(container.firstChild);
 
-          const { containers } = window.$transition.from;
-          el.querySelector('.dummy-posts').append(...containers);
+          if (fancyTransition()) {
+            const { containers } = window.$transition.from;
+            el.querySelector('.dummy-posts').append(...containers);
+          }
 
           window.$transition.to = { container };
         },
         async enter(el, done) {
-          const { clone, containers } = window.$transition.from;
+          const { animationTarget, containers } = window.$transition.from;
           const { container, posts } = window.$transition.to;
 
-          window.scroll({ top: 0 });
-          await moveToElement(clone, container);
+          if (fancyTransition()) {
+            window.scroll({ top: 0 });
+            await moveToElement(animationTarget, container);
+          }
+
           el.querySelector('.dummy-posts').remove();
 
-          container.style.opacity = '1';
-          clone.remove();
+          setOpacityOne(container);
+          animationTarget.remove();
 
-          await fadeIn(container.querySelector('.post'));
-
-          container.style.overflow = 'auto';
-          container.style.height = 'auto';
-
+          await fadeIn(container.firstChild);
+          autoPosition(container);
           done();
         },
         afterEnter() {
           bodyScroll('auto');
         },
         enterCancelled() {
-          window.$transition.from.clone.remove();
+          window.$transition.from.animationTarget.remove();
         },
         beforeLeave(el) {
           const container = el.querySelector('.post-container');
-          const clone = container.cloneNode(true);
-          setPosition(clone, elementPosition(container));
-          el.after(clone);
-          clone.style.overflow = 'hidden';
+          const animationTarget = container.cloneNode(true);
+          setPosition(animationTarget, elementPosition(container));
+          el.after(animationTarget);
+          animationTarget.style.overflow = 'hidden';
 
           container.style.visibility = 'hidden';
 
           window.$transition = {
             from: {
-              clone,
+              animationTarget,
               postId: from.fullPath
             },
             to: {}
           };
-
+        },
+        afterLeave() {
           bodyScroll('scroll');
         },
         async leave(el, done) {
-          const { clone } = window.$transition.from;
-          await fadeOut(clone.querySelector('.post'));
-          clone.firstChild.remove();
+          const { animationTarget } = window.$transition.from;
+          await fadeOut(animationTarget.querySelector('.post'));
+          animationTarget.firstChild.remove();
           done();
         }
       };
     } else {
-      return {
-        css: false,
-        beforeEnter(el) {
-          const container = el.querySelector('.post-container');
-          setScaleZero(container);
-          container.querySelector('.post').style.opacity = '0';
-        },
-        async enter(el, done) {
-          const container = el.querySelector('.post-container');
-          const post = container.querySelector('.post');
-          await scaleIn(container);
-          await fadeIn(post);
-          done();
-        },
-        afterEnter() {
-          bodyScroll('auto');
-        },
-        beforeLeave() {
-          bodyScroll('scroll');
-        },
-        async leave(el, done) {
-          const container = el.querySelector('.post-container');
-          await fadeOut(container.querySelector('.post'));
-          await scaleOut(container);
-          done();
-        },
-        afterLeave() {
-          bodyScroll('auto');
-        }
-      };
+      return pageTransition('.post-container');
     }
   }
 };

@@ -3,7 +3,7 @@ title: Simple, beautiful input fields with Vue.js
 layout: post
 date: 2018-07-27 19:35:14
 tags:
-  - vue.js
+  - vuejs
   - frontend
   - ui
   - animation

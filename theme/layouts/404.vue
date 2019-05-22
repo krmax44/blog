@@ -2,15 +2,17 @@
   <BaseLayout :page="page">
     <div class="container">
       <div class="page-container">
-        <saber-image src="../assets/images/monkey.jpg" />
         <div>
-          <h1>404</h1>
-          <span>
-            OOPSIE WOOPSIE!! Uwu We made a fucky wucky!! A wittle fucko boingo!
-            The code monkeys at our headquarters are working VEWY HAWD to fix
-            this!
-          </span>
-          <saber-link to="/">← Back to the zoo</saber-link>
+          <saber-image src="../assets/images/monkey.jpg" />
+          <div>
+            <h1>404</h1>
+            <span>
+              OOPSIE WOOPSIE!! Uwu We made a fucky wucky!! A wittle fucko
+              boingo! The code monkeys at our headquarters are working VEWY HAWD
+              to fix this!
+            </span>
+            <p><saber-link to="/">← Back to the zoo</saber-link></p>
+          </div>
         </div>
       </div>
     </div>
@@ -29,7 +31,7 @@ export default {
       title: `404 - ${this.$siteConfig.title}`
     };
   },
-  transition
+  transition: transition('.page-container')
 };
 </script>
 
@@ -43,38 +45,49 @@ export default {
 .page-container {
   flex: 1;
   min-height: 100%;
-  margin: 5px;
-  position: relative;
-  border-radius: 5px;
-  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.15);
-  background-color: rgba(0, 0, 0, 0.5);
-  overflow: hidden;
 
-  & > img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-
-  & > div {
+  div {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     height: 100%;
-    padding: 20px;
-    text-align: center;
-  }
+    flex: 1;
+    margin: 5px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 
-  span {
-    font-size: 1.2em;
-  }
+    & > img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
 
-  h1,
-  span,
-  a {
-    color: #fff;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    span {
+      font-size: 1.2em;
+    }
+
+    h1,
+    span,
+    a {
+      color: #fff;
+    }
+
+    a {
+      border-bottom: 1px #fff solid;
+    }
   }
 }
 </style>

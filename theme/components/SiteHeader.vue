@@ -55,7 +55,7 @@ header {
   }
 
   a {
-    color: $dark;
+    color: $accent;
     text-decoration: none;
   }
 

@@ -18,7 +18,7 @@ import transition from '../utils/page-transition';
 export default {
   components: { BaseLayout },
   props: ['page'],
-  transition
+  transition: transition('.page-container')
 };
 </script>
 

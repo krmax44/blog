@@ -85,6 +85,15 @@ export function setPosition(target, position = {}) {
 	}
 }
 
+export function autoPosition(target) {
+	target.style.overflow = 'auto';
+	target.style.height = 'auto';
+}
+
 export function bodyScroll(to = 'auto') {
 	document.body.style.overflowY = to;
+}
+
+export function fancyTransition() {
+	return window.innerWidth >= 992;
 }

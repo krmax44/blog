@@ -28,7 +28,7 @@ import {
   setOpacityOne,
   setPosition,
   bodyScroll,
-  moveToCoords
+  fancyTransition
 } from '../utils/animation-utils';
 
 export default {
@@ -37,7 +37,10 @@ export default {
   transition(to, from = {}) {
     const postRegex = /\/[0-9]{4}\/[0-9]{2}\/[0-9]{2}\/.*/gm;
 
-    if (postRegex.test(to.fullPath) || postRegex.test(from.fullPath)) {
+    if (
+      (postRegex.test(to.fullPath) || postRegex.test(from.fullPath)) &&
+      ![to.name, from.name].includes('404')
+    ) {
       return {
         css: false,
         beforeEnter(el) {
@@ -52,54 +55,50 @@ export default {
           window.$transition.to = { container };
         },
         async enter(el, done) {
-          const { clone, postId } = window.$transition.from;
+          const { animationTarget, postId } = window.$transition.from;
           const { container } = window.$transition.to;
 
-          await moveToElement(clone, container, true);
+          if (fancyTransition()) {
+            await moveToElement(animationTarget, container, true);
+          }
 
           container.style.opacity = '1';
-          clone.remove();
+          animationTarget.remove();
           fadeIn(container.querySelector('.post')).then(done);
         },
         afterEnter() {
           bodyScroll('auto');
         },
         enterCancelled() {
-          window.$transition.from.clone.remove();
+          window.$transition.from.animationTarget.remove();
         },
         beforeLeave(el) {
+          bodyScroll('scroll');
+        },
+        async leave(el, done) {
           const container = el.querySelector(
             `.post-container[data-id="${to.fullPath}"]`
           );
 
-          const clone = container.cloneNode(true);
-          const position = elementPosition(container);
-          container.style.visibility = 'hidden';
+          let animationTarget;
+          if (fancyTransition()) {
+            animationTarget = container.cloneNode(true);
+            el.after(animationTarget);
+            setPosition(animationTarget, elementPosition(container));
+            container.style.visibility = 'hidden';
+          } else {
+            animationTarget = container;
+          }
 
-          el.after(clone);
-          setPosition(clone, position);
+          await fadeOut(animationTarget.firstChild);
 
           window.$transition = {
             from: {
-              clone
-            },
-            to: {}
+              animationTarget,
+              containers: el.querySelectorAll('.post-container')
+            }
           };
 
-          bodyScroll('scroll');
-        },
-        async leave(el, done) {
-          const { clone } = window.$transition.from;
-          const containers = el.querySelectorAll(
-            `.post-container:not([data-id="${to.fullPath}"])`
-          );
-
-          window.$transition.from.containers = el.querySelectorAll(
-            '.post-container'
-          );
-
-          await fadeOut(clone.querySelector('.post'));
-          clone.firstChild.remove();
           done();
         },
         afterLeave(el) {
