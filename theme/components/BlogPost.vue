@@ -85,7 +85,6 @@
 <script>
 import SiteButton from './SiteButton';
 import copy from 'clipboard-copy';
-import format from 'date-fns/format';
 
 export default {
   components: { SiteButton },
@@ -115,7 +114,11 @@ export default {
       }
     },
     date() {
-      return format(new Date(this.post.attributes.date), 'YYYY/MM/DD');
+      const date = new Date(this.post.attributes.date);
+      const twoDigits = input => String(input).padStart(2, '0');
+      return `${date.getFullYear()}/${twoDigits(
+        date.getMonth() + 1
+      )}/${twoDigits(date.getDate())}`;
     },
     cursorStyle() {
       return { cursor: this.index ? 'pointer' : 'normal' };

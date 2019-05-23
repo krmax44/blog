@@ -8,11 +8,11 @@ $accent: rgb(69, 146, 214);
 $opaque: transparentize($accent, 0.2);
 $background: #eaedf1;
 
-$league: Assistant, sans-serif;
-$assistant: Assistant, Segoe UI, Roboto, sans-serif, 'Apple Color Emoji',
-  'Segoe UI Emoji', 'Segoe UI Symbol';
-$fira: Fira Mono, Consolas, monospace, 'Apple Color Emoji', 'Segoe UI Emoji',
+$native-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+  'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
   'Segoe UI Symbol';
+$assistant: Assistant, $native-font-stack;
+$fira: 'Fira Code', 'Fira Mono', monospace, $native-font-stack;
 
 $breakpoint-sm: 600px;
 $breakpoint-md: 992px;
