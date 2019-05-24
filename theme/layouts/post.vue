@@ -89,7 +89,7 @@ export default {
           el.after(animationTarget);
           animationTarget.style.overflow = 'hidden';
 
-          container.style.visibility = 'hidden';
+          setOpacityZero(container);
 
           window.$transition = {
             from: {
@@ -98,8 +98,6 @@ export default {
             },
             to: {}
           };
-        },
-        afterLeave() {
           bodyScroll('scroll');
         },
         async leave(el, done) {
@@ -107,6 +105,9 @@ export default {
           await fadeOut(animationTarget.querySelector('.post'));
           animationTarget.firstChild.remove();
           done();
+        },
+        afterLeave() {
+          bodyScroll('auto');
         }
       };
     } else {

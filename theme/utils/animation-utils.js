@@ -54,8 +54,8 @@ export function moveToCoords(targets, to = {}) {
 	}).finished;
 }
 
-export function moveToElement(targets, element, collapse) {
-	return moveToCoords(targets, elementPosition(element), collapse);
+export function moveToElement(targets, element) {
+	return moveToCoords(targets, elementPosition(element));
 }
 
 export function setScaleZero(target) {

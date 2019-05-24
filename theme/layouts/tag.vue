@@ -50,19 +50,21 @@ export default {
             `.post-container[data-id="${postId}"]`
           );
 
-          container.style.opacity = '0';
+          setOpacityZero(container);
 
           window.$transition.to = { container };
+
+          bodyScroll('scroll');
         },
         async enter(el, done) {
           const { animationTarget, postId } = window.$transition.from;
           const { container } = window.$transition.to;
 
           if (fancyTransition()) {
-            await moveToElement(animationTarget, container, true);
+            await moveToElement(animationTarget, container);
           }
 
-          container.style.opacity = '1';
+          setOpacityOne(container);
           animationTarget.remove();
           fadeIn(container.querySelector('.post')).then(done);
         },
@@ -85,7 +87,7 @@ export default {
             animationTarget = container.cloneNode(true);
             el.after(animationTarget);
             setPosition(animationTarget, elementPosition(container));
-            container.style.visibility = 'hidden';
+            setOpacityZero(container);
           } else {
             animationTarget = container;
           }
@@ -95,7 +97,7 @@ export default {
           window.$transition = {
             from: {
               animationTarget,
-              containers: [...el.querySelectorAll('.post-container')]
+              containers: el.querySelectorAll('.post-container')
             }
           };
 
