@@ -29,7 +29,8 @@ module.exports = {
 		title: "Max' Blog",
 		author: 'krmax44',
 		url: 'https://krmax44.de',
-		email: 'hi@krmax44.de'
+		email: 'hi@krmax44.de',
+		lang: 'en'
 	},
 	permalinks: {
 		post: '/:year/:month/:day/:slug/',
