@@ -3,6 +3,7 @@
     class="post-container"
     :data-id="post.attributes.permalink"
     :style="cursorStyle"
+    :title="index ? post.attributes.title : undefined"
     @click="$router.push(post.attributes.permalink)"
   >
     <div class="post">
@@ -17,6 +18,7 @@
       >
         <saber-image
           :src="post.attributes.assets.image"
+          :alt="post.attributes.title"
           width="1000"
           height="242"
         />
