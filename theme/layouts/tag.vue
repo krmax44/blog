@@ -95,7 +95,7 @@ export default {
           window.$transition = {
             from: {
               animationTarget,
-              containers: el.querySelectorAll('.post-container')
+              containers: [...el.querySelectorAll('.post-container')]
             }
           };
 
