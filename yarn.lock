@@ -6301,10 +6301,10 @@ saber-markdown@^0.0.7:
   resolved "https://registry.yarnpkg.com/saber-markdown/-/saber-markdown-0.0.7.tgz#282fe2429e1d34d2ffbff547b7830f8f27d50d07"
   integrity sha512-tW7iTaZCD3GYxcw8so9H+1ObxKHaE1iRaf/gq/y0Ddz6xd7x65fgsJvEe4RpkYFBhUiJAkdvfNAZiwDaa9Ft2Q==
 
-saber-plugin-feed@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/saber-plugin-feed/-/saber-plugin-feed-0.3.0.tgz#2fe911a872e5900f783483898267774703bc85c8"
-  integrity sha512-1xY9iGmVfKZJrAwwJ2kTB/w3Qmtr+9Wkoy3d4Jmzp3o9jlwE3msbE5vdb+mkiQB+zAY2VhuCIeQiJSRuc+9mbw==
+saber-plugin-feed@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/saber-plugin-feed/-/saber-plugin-feed-0.3.2.tgz#c804d55df929cf56148eda951639271d6b06c988"
+  integrity sha512-jWNjDZKvzq+X6KBamb3eY0zud3dud1bWeQ9BW2ddIVDMDL0qj7+qK57WvwRcPmDaR4SpwtBkiN21to4/2RydbA==
   dependencies:
     feed "^2.0.4"
 
@@ -6315,10 +6315,10 @@ saber-plugin-generate-feed@^0.2.0:
   dependencies:
     feed "^2.0.4"
 
-saber-plugin-image@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/saber-plugin-image/-/saber-plugin-image-0.0.3.tgz#6b2787be5be7e5b14a1eb93f04201923b39396b9"
-  integrity sha512-o5N623E0ncGg5FTS+Jhgthn5tPRUpqKdnXS/4BkfOihiBBl7rOMXeUwk92JZ7vEE1mj2t+CFsLn66hbFGNMVBw==
+saber-plugin-image@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/saber-plugin-image/-/saber-plugin-image-0.0.4.tgz#5bd6ef54e302a52de3399212dc2ae53a72059e78"
+  integrity sha512-xzxPyXbON5ZyKdAgc6Mq1lk6IibVr2ErwjH5Q4hNoCznIk7mLYR2I6CruiPDIITkjCwG7M2MqVqxA2TlI6F5eg==
   dependencies:
     responsive-loader "^1.2.0"
     sharp "^0.22.1"
@@ -6331,10 +6331,10 @@ saber-plugin-prismjs@^0.2.0:
   dependencies:
     saber-highlighter-prism "^0.3.0"
 
-saber-plugin-query-posts@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/saber-plugin-query-posts/-/saber-plugin-query-posts-0.3.0.tgz#eff9836e3a314437d8a7d1dfc89df0f62e2fd429"
-  integrity sha512-q+6Jm0ksVvxhH9IuxhlRnOlqBzjOatrODA2M/WMYoQUOMxsiDNG7dV/B9Gajl6YFR81i7/+bEOZIyo5o0jOtKQ==
+saber-plugin-query-posts@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/saber-plugin-query-posts/-/saber-plugin-query-posts-0.3.1.tgz#6f2d712a88bc1f29182becb3293326bdbed06db5"
+  integrity sha512-OwJCJc+3sIOpgnPLArpU+5yjIG+IsOk4cVMnDghM27rWI5yvJ5YEgfbhOhL6GRwILy2BQrOve9HaABDUlnV9Dw==
   dependencies:
     slugo "^0.2.3"
     url-join "^4.0.0"
@@ -6344,10 +6344,10 @@ saber-utils@^0.1.4:
   resolved "https://registry.yarnpkg.com/saber-utils/-/saber-utils-0.1.4.tgz#207539fc8dc4b8a19ff3930181752d760941e506"
   integrity sha512-UxqS3aK4AnRaKv+N+tVCgKps9L9+mhEnPDFM7ATwhXQDnDsiWBcAG/ldbn+tPDN6lBfWWn9nBXrvu5VsBPSmXg==
 
-saber@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/saber/-/saber-0.6.2.tgz#52c573d1273d1576ed041c1e8f1a1f0b5e0eeee0"
-  integrity sha512-77UMNRWAOBi7xfmUiuaBtrC2fTYZPOdqFGGdNOCpuytnM+2OaMNMScmEWohxrbtfC76PxYwJeahs3UJd61hOyg==
+saber@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/saber/-/saber-0.6.3.tgz#fc218299f935637fec87e484ef9db0dcb2a781ec"
+  integrity sha512-qZigCUdeChLPIanm+GcFxFNf4gl5xHaVA/k2FU0hRWp5VRHMqoAsNc/xPcWTNRTUbBvhWaPjxKLMfDeMJSk5oA==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/plugin-proposal-object-rest-spread" "^7.2.0"
