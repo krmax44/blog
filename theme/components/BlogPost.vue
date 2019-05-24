@@ -4,7 +4,7 @@
     :data-id="post.attributes.permalink"
     :style="cursorStyle"
     :title="index ? post.attributes.title : undefined"
-    @click="$router.push(post.attributes.permalink)"
+    @click="viewPost"
   >
     <div class="post">
       <div
@@ -127,6 +127,11 @@ export default {
     }
   },
   methods: {
+    viewPost() {
+      if (this.index) {
+        this.$router.push(this.post.attributes.permalink);
+      }
+    },
     copyUrl() {
       copy(window.location.href);
       const current = this.$refs.copyUrl.style.transform.match(/\d+/gm);
