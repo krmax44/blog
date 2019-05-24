@@ -33,6 +33,12 @@ export default {
 
     return {
       title,
+      base: {
+        href:
+          process.env.NODE_ENV === 'production'
+            ? `${siteConfig.url}/`
+            : undefined
+      },
       meta: [
         {
           name: 'og:title',
@@ -105,7 +111,7 @@ export default {
           sizes: '512x512'
         }
       ],
-      htmlAttrs: { lang: 'de' }
+      htmlAttrs: { lang: 'en' }
     };
   }
 };
