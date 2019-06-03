@@ -116,7 +116,7 @@ export default {
       }
     },
     date() {
-      const date = new Date(this.post.attributes.date);
+      const date = new Date(this.post.attributes.createdAt);
       const twoDigits = input => String(input).padStart(2, '0');
       return `${date.getFullYear()}/${twoDigits(
         date.getMonth() + 1

@@ -78,7 +78,7 @@ export default {
         },
         {
           name: 'robots',
-          content: attributes.noRobots ? 'noindex,nofollow' : 'index,follow'
+          content: attributes.noIndex ? 'noindex,nofollow' : 'index,follow'
         }
       ],
       link: [
