@@ -38,6 +38,9 @@ So here's the magic script that does all of the above:
 # create a backup folder
 mkdir backup -p
 
+# current date in form YYYY-MM-DD--HH-MM-SS
+datetime=`date '+%Y-%m-%d--%H-%M-%S'`
+
 # for every subfolder
 for D in `find . -maxdepth 1 -type d`; do
   # if it's the projects folder or the backup folder, ignore it
@@ -46,13 +49,20 @@ for D in `find . -maxdepth 1 -type d`; do
 
   # if it's not a git repo, simply zip it
   elif [ ! -d "${D}/.git" ]; then
-    zip -r ${D}.zip ${D} -x "**/.git/*" "**/node_modules/*"
-    mv ${D}.zip ./backup/
+    # remove "./" from path
+    project=${D:2}
+
+    file="${project}-${datetime}.zip"
+    zip -r ${file} ${D} -x "**/node_modules/*"
+    mv ${file} ./backup/
 
   # if it's a git repo, use git archive
   else
+    # remove "./" from path
+    project=${D:2}
+
     # create a backup folder for the project
-    mkdir backup/${D} -p
+    mkdir backup/${project} -p
 
     # into the project's folder
     cd ${D}
@@ -61,22 +71,22 @@ for D in `find . -maxdepth 1 -type d`; do
     git for-each-ref --format='%(refname:short)' refs/heads | \
     while read branch; do
       # replace "/" with "-"
-      branchpath=${branch//\//-}
+      branchpath=../backup/${project}/${branch//\//-}
 
       # create a branch folder within the project's backup folder
-      mkdir backup/${D}/${branchpath} -p
+      mkdir ${branchpath} -p
 
       # archive the branch
-      git archive --format zip --output ../backup/${D}/${branchpath}.zip $branch
+      git archive --format zip --output ${branchpath}.zip $branch
     done
 
     cd ../
 
     # zip the branch backups so we get one file for the repo
-    zip -r -j ./backup/${D}.zip ./backup/${D}/
+    zip -r -j ./backup/${project}-${datetime}.zip ./backup/${project}/
 
     # delete the backup folder
-    rm ./backup/${D} -r
+    rm ./backup/${project}/ -r
 
   fi
 done
