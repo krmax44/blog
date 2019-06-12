@@ -5,7 +5,7 @@
         <div>
           <saber-image src="../assets/images/monkey.jpg" />
           <div>
-            <h1>404</h1>
+            <h1>{{ title }}</h1>
             <span>
               OOPSIE WOOPSIE!! Uwu We made a fucky wucky!! A wittle fucko
               boingo! The code monkeys at our headquarters are working VEWY HAWD
@@ -26,9 +26,14 @@ import transition from '../utils/page-transition';
 export default {
   components: { BaseLayout },
   props: ['page'],
+  computed: {
+    title() {
+      return this.page.attributes.title || '404 Not Found';
+    }
+  },
   head() {
     return {
-      title: `404 - ${this.$siteConfig.title}`
+      title: `${this.title} - ${this.$siteConfig.title}`
     };
   },
   transition: transition('.page-container')
