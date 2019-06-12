@@ -28,7 +28,7 @@ export default {
   props: ['page'],
   computed: {
     title() {
-      return this.page.attributes.title || '404 Not Found';
+      return (this.page && this.page.attributes.title) || '404 Not Found';
     }
   },
   head() {
