@@ -2,6 +2,3 @@
 node_modules
 *.log
 public/
-
-pages/imprint.md
-pages/privacy.md
