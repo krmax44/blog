@@ -5,7 +5,7 @@
         <div>
           <saber-image src="../assets/images/monkey.jpg" />
           <div>
-            <h1>{{ title }}</h1>
+            <h1 v-once>{{ title }}</h1>
             <span>
               OOPSIE WOOPSIE!! Uwu We made a fucky wucky!! A wittle fucko
               boingo! The code monkeys at our headquarters are working VEWY HAWD
