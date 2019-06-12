@@ -5,7 +5,7 @@
         <div>
           <saber-image src="../assets/images/monkey.jpg" />
           <div>
-            <h1 v-once>{{ title }}</h1>
+            <h1>404 Not Found</h1>
             <span>
               OOPSIE WOOPSIE!! Uwu We made a fucky wucky!! A wittle fucko
               boingo! The code monkeys at our headquarters are working VEWY HAWD
@@ -26,15 +26,14 @@ import transition from '../utils/page-transition';
 export default {
   components: { BaseLayout },
   props: ['page'],
-  computed: {
-    title() {
-      return (this.page && this.page.attributes.title) || '404 Not Found';
-    }
-  },
   head() {
     return {
-      title: `${this.title} - ${this.$siteConfig.title}`
+      title: `404 Not Found - ${this.$siteConfig.title}`
     };
+  },
+  beforeRouteLeave(to, from, next) {
+    console.log(to, from);
+    next();
   },
   transition: transition('.page-container')
 };

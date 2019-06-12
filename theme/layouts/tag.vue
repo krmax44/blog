@@ -39,7 +39,7 @@ export default {
 
     if (
       (postRegex.test(to.fullPath) || postRegex.test(from.fullPath)) &&
-      ![to.name, from.name].includes('404')
+      ![to.name, from.name].includes(404)
     ) {
       return {
         css: false,
