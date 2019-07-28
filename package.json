@@ -4,21 +4,22 @@
 	"main": "index.js",
 	"license": "MIT",
 	"dependencies": {
-		"animejs": "^3.0.1",
+		"animejs": "^3.1.0",
 		"clipboard-copy": "^3.0.0",
 		"element-in-view": "^0.1.0",
+		"morpheus": "^0.7.2",
 		"node-sass": "^4.11.0",
-		"prismjs": "^1.16.0",
-		"saber": "^0.6.3",
-		"saber-highlighter-prism": "^0.3.0",
-		"saber-plugin-feed": "^0.3.2",
+		"prismjs": "^1.17.1",
+		"saber": "^0.7.0",
+		"saber-highlighter-prism": "^0.3.1",
+		"saber-plugin-feed": "^0.4.0",
 		"saber-plugin-generate-feed": "^0.2.0",
-		"saber-plugin-image": "^0.0.4",
-		"saber-plugin-prismjs": "^0.2.0",
-		"saber-plugin-query-posts": "^0.3.1",
+		"saber-plugin-image": "^0.1.0",
+		"saber-plugin-prismjs": "^0.2.1",
+		"saber-plugin-query-posts": "^0.4.0",
 		"sass-loader": "^7.1.0",
 		"style-resources-loader": "^1.2.1",
-		"typeface-assistant": "^0.0.54",
+		"typeface-assistant": "^0.0.75",
 		"typeface-fira-mono": "^0.0.72"
 	},
 	"scripts": {
@@ -27,9 +28,9 @@
 		"lint": "xo"
 	},
 	"devDependencies": {
-		"eslint-config-prettier": "^4.3.0",
+		"eslint-config-prettier": "^6.0.0",
 		"eslint-plugin-prettier": "^3.1.0",
-		"prettier": "^1.17.1",
+		"prettier": "^1.18.2",
 		"xo": "^0.24.0"
 	},
 	"xo": {
