@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"animejs": "^3.1.0",
-		"clipboard-copy": "^3.0.0",
+		"clipboard-copy": "^3.1.0",
 		"element-in-view": "^0.1.0",
 		"morpheus": "^0.7.2",
 		"node-sass": "^4.11.0",
@@ -14,10 +14,10 @@
 		"saber-highlighter-prism": "^0.3.1",
 		"saber-plugin-feed": "^0.4.0",
 		"saber-plugin-generate-feed": "^0.2.0",
-		"saber-plugin-image": "^0.1.0",
+		"saber-plugin-image": "^0.2.0",
 		"saber-plugin-prismjs": "^0.2.1",
-		"saber-plugin-query-posts": "^0.4.0",
-		"sass-loader": "^7.1.0",
+		"saber-plugin-query-posts": "^0.4.1",
+		"sass-loader": "^7.2.0",
 		"style-resources-loader": "^1.2.1",
 		"typeface-assistant": "^0.0.75",
 		"typeface-fira-mono": "^0.0.72"
