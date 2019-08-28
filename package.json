@@ -15,7 +15,7 @@
 		"saber-plugin-feed": "^0.4.0",
 		"saber-plugin-generate-feed": "^0.2.0",
 		"saber-plugin-image": "^0.2.0",
-		"saber-plugin-prismjs": "^0.2.1",
+		"saber-plugin-prismjs": "^0.2.2",
 		"saber-plugin-query-posts": "^0.4.1",
 		"sass-loader": "^7.2.0",
 		"style-resources-loader": "^1.2.1",
