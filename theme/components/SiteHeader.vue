@@ -61,7 +61,6 @@ header {
 
   img {
     height: 2em;
-    filter: invert(1);
 
     @media (max-width: $breakpoint-lg) {
       height: 1.5em;
