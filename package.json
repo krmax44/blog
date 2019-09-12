@@ -14,7 +14,7 @@
 		"saber-highlighter-prism": "^0.3.2",
 		"saber-plugin-feed": "^0.4.2",
 		"saber-plugin-generate-feed": "^0.2.0",
-		"saber-plugin-image": "^0.2.1",
+		"saber-plugin-image": "^0.2.2",
 		"saber-plugin-prismjs": "^0.2.2",
 		"saber-plugin-query-posts": "^0.4.2",
 		"sass-loader": "^7.3.1",
