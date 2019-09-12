@@ -11,7 +11,7 @@
 		"node-sass": "^4.11.0",
 		"prismjs": "^1.17.1",
 		"saber": "^0.8.1",
-		"saber-highlighter-prism": "^0.3.2",
+		"saber-highlighter-prism": "^0.3.3",
 		"saber-plugin-feed": "^0.4.2",
 		"saber-plugin-generate-feed": "^0.2.0",
 		"saber-plugin-image": "^0.2.1",
