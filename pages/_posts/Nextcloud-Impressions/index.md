@@ -6,7 +6,8 @@ tags:
   - privacy
   - nextcloud
 assets:
-  image: ./Nextcloud-Impressions/nextcloud.svg
+  image: ./nextcloud.svg
+slug: Nextcloud-Impressions
 ---
 
 In [one of my recent posts](/2018/08/08/My-efforts-towards-privacy/), I stated that I ditched Google for privacy reasons. Having used their services for doing calendar, file syncing, note taking and task tracking activities, this left me kind of stranded. Luckily, there is Nextcloud that steps into place and saves the day. Here are my impressions from using it for about a month now.

@@ -4,17 +4,17 @@ layout: page
 noIndex: true
 ---
 
-Information in accordance with Section 5 TMG
+### Contact Information
+
+E-mail: [hi@krmax44.de](mailto://hi@krmax44.de) ([public key](/max.gpg))<br>
+Twitter: [@krmax44](https://twitter.com/krmax44)
+
+### Information in accordance with Section 5 TMG
 
 Max Kronmüller<br>
 Sandbergstr. 22<br>
 74251 Lehrensteinsfeld<br>
 Germany
-
-### Contact Information
-
-E-mail: [hi@krmax44.de](mailto://hi@krmax44.de)<br>
-Twitter: [@krmax44](https://twitter.com/krmax44)
 
 ### Image Sources
 

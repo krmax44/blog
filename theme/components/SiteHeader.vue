@@ -10,15 +10,18 @@
         <a href="https://github.com/krmax44">
           <img src="../assets/images/github.svg" />
         </a>
+        <a href="https://chaos.social/@krmax44" rel="me">
+          <img src="../assets/images/mastodon.svg" />
+        </a>
         <a href="https://twitter.com/krmax44">
           <img src="../assets/images/twitter.svg" />
         </a>
         <a :href="$feed.permalink || '#!'">
           <img src="../assets/images/rss.svg" />
         </a>
-        <a href="mailto:hi@krmax44.de">
+        <saber-link to="/imprint">
           <img src="../assets/images/mail.svg" />
-        </a>
+        </saber-link>
       </div>
     </div>
   </header>

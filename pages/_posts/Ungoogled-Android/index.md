@@ -7,7 +7,8 @@ tags:
   - privacy
   - foss
 assets:
-  image: ./Ungoogled-Android/kick-google-out.png
+  image: ./kick-google-out.png
+slug: Ungoogled-Android
 ---
 
 For a good while now I've been running my Android phone with no Google Apps, and I don't regret trying it out. It's a really good experience without it. Want to learn how to ungoogle your Android as well? This post is for you.

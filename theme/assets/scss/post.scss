@@ -42,6 +42,10 @@
     padding: 20px;
   }
 
+  .post-text {
+    padding-bottom: 0;
+  }
+
   .post-content /deep/ img {
     display: block;
     max-height: 50vh;
@@ -51,6 +55,9 @@
   }
 
   .read-more {
+    margin-top: auto;
+    padding: 20px;
+    padding-top: 0;
     font-weight: bold;
   }
 
@@ -122,6 +129,7 @@
     img {
       width: 30px;
       height: 30px;
+      filter: invert(1);
     }
   }
 

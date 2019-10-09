@@ -32,23 +32,24 @@
           <!-- eslint-disable-next-line vue/no-v-html -->
           <div v-html="post.excerpt" v-if="index" />
           <slot v-if="!index" />
-          <saber-link
-            v-if="index"
-            :to="post.attributes.permalink"
-            class="read-more"
-          >
-            Read more...
-          </saber-link>
         </div>
       </div>
+
+      <saber-link
+        v-if="index"
+        :to="post.attributes.permalink"
+        class="read-more"
+      >
+        Read more...
+      </saber-link>
 
       <div v-if="!index" class="post-tags">
         This post is tagged with
         <saber-link
           :to="tag.permalink"
           class="tag"
-          v-for="tag in post.tags"
-          :key="tag.permalink"
+          v-for="tag in post.tagsInfo"
+          :key="tag.name"
         >
           #{{ tag.name }}
         </saber-link>
@@ -68,9 +69,7 @@
         <SiteButton
           target="_blank"
           :href="
-            `https://www.reddit.com/submit?title=${
-              post.attributes.title
-            }&url=${url}`
+            `https://www.reddit.com/submit?title=${post.attributes.title}&url=${url}`
           "
           fab
         >

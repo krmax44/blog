@@ -4,7 +4,8 @@ layout: post
 date: 2018-08-08 19:59:15
 tags: privacy
 assets:
-  image: ./My-efforts-towards-privacy/kick-google-out.png
+  image: ./kick-google-out.png
+slug: My-Efforts-Towards-Privacy
 ---
 
 Recently, I started caring more about my privacy. As I found it to be rather tough to find alternatives to the services I was already using, I decided to write this post listing alternative apps and services.
