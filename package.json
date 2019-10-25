@@ -8,7 +8,7 @@
 		"clipboard-copy": "^3.1.0",
 		"element-in-view": "^0.1.0",
 		"morpheus": "^0.7.2",
-		"node-sass": "^4.11.0",
+		"node-sass": "^4.13.0",
 		"prismjs": "^1.17.1",
 		"saber": "^0.10.4",
 		"saber-highlighter-prism": "^0.3.3",
