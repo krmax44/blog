@@ -7505,17 +7505,17 @@ rxjs@^6.4.0:
   dependencies:
     tslib "^1.9.0"
 
-saber-highlighter-prism@^0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/saber-highlighter-prism/-/saber-highlighter-prism-0.3.3.tgz#7dd275b7f76fa6d32e0fd2bf8c7c6ce1acb9f6d9"
-  integrity sha512-rG4a+pyVbSrSUW9yNDxsxs7tkfAmzgXxI256DEu5EBNUhATj/9vfDJBMfXEJeIvd85jtDq+WTjPx5ZPlzmT5cA==
+saber-highlighter-prism@^0.3.3, saber-highlighter-prism@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/saber-highlighter-prism/-/saber-highlighter-prism-0.3.4.tgz#5a0bb736ba33408cc66a14129603357c0886b1ff"
+  integrity sha512-ZC41hT6FVd1YAW0Zgo+Nb91zfIfk2lvuS6M0FEiNKwZVKl+WOue0Qt5WitaBxrVv1xtqsIHXd3dpysKTTQWACg==
   dependencies:
-    saber-log "^0.3.0"
+    saber-log "^0.3.1"
 
-saber-log@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/saber-log/-/saber-log-0.3.0.tgz#946b5a964e23b73aefe3fd2b86836641d2f1ad23"
-  integrity sha512-zXNL8E8bJYznYvZkNKdDyIjcg1jCHbyk17aaPHR315GKK919KGAtr7aAWe6Hj6VfV+yPe/VUFKmru8YjoXJJ1A==
+saber-log@^0.3.0, saber-log@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/saber-log/-/saber-log-0.3.1.tgz#412c19554d163eb4f88e3b9040a492c0513cb556"
+  integrity sha512-cKzhJOVeU9tGOWaqCtcjdmFTUJnzU+5waqUYE9FOrJzbYX1hBt8riqNshLF/m1OfUts+jmnzK5jU6BpULSFn4w==
 
 saber-markdown@^0.1.5:
   version "0.1.5"
