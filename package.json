@@ -10,7 +10,7 @@
 		"morpheus": "^0.7.2",
 		"node-sass": "^4.11.0",
 		"prismjs": "^1.17.1",
-		"saber": "^0.10.4",
+		"saber": "^0.11.3",
 		"saber-highlighter-prism": "^0.3.3",
 		"saber-plugin-feed": "^0.4.2",
 		"saber-plugin-generate-feed": "^0.2.0",
