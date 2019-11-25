@@ -65,7 +65,7 @@ Not to mention all the apps that don't even exist as open-source alternatives. T
 
 ### Some Other Random Apps I Like
 
-Modified from an [older post](/2018/08/08/My-efforts-towards-privacy/).
+Modified from an [older post](../My-efforts-towards-privacy/index.md).
 
 - [AdAway](https://f-droid.org/de/packages/org.adaway/) blocks ads at host-level, root required
 - [Amaze](https://f-droid.org/de/packages/com.amaze.filemanager/) is my filemanager of choice
