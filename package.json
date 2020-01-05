@@ -12,7 +12,7 @@
 		"prismjs": "^1.17.1",
 		"saber": "^0.10.4",
 		"saber-highlighter-prism": "^0.3.3",
-		"saber-plugin-feed": "^0.4.2",
+		"saber-plugin-feed": "^0.4.3",
 		"saber-plugin-generate-feed": "^0.2.0",
 		"saber-plugin-image": "^0.2.2",
 		"saber-plugin-prismjs": "^0.2.3",
