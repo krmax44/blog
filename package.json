@@ -9,7 +9,7 @@
 		"element-in-view": "^0.1.0",
 		"morpheus": "^0.7.2",
 		"node-sass": "^4.11.0",
-		"prismjs": "^1.17.1",
+		"prismjs": "^1.18.0",
 		"saber": "^0.10.4",
 		"saber-highlighter-prism": "^0.3.3",
 		"saber-plugin-feed": "^0.4.2",
